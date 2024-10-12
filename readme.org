@@ -1,0 +1,37 @@
+#+title: Todo list 2.0
+
+* Descripción:
+
+Crea una aplicación de gestión tareas (un TODO list), en donde puedas agregar tareas, marcarlas como finalizadas, en espera o canceladas. Si te parece sencillo hasta ahí, añade que el sistema tendrá usuarios que deberán loguearse, cada uno tendrá sus propias listas de tareas que solo ellos pueden ver cuando se loguean.
+
+* Base de datos
+
+|----------|
+| User     |
+|----------|
+| Id       |
+| Nick     |
+| Token    |
+| Password |
+| Admin    |
+| Avatar   |
+|----------|
+
+|---------|
+| Task    |
+|---------|
+| Id      |
+| Content |
+| UserId  |
+|         |
+|---------|
+
+* Project task
+** TODO task
+   DEADLINE: <2024-10-06 Sat +1m>
+
+- [X] Crear la bd en phpmysql
+- [X] Añadir la BD en el archivo config.php
+- [ ] Crear el archivo users.php en la carpeta models.
+- [ ] Crear el archivo Tarea.php en la carpeta models.
+- [ ] Crear la clase Tarea.
