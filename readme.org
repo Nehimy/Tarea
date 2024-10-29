@@ -6,23 +6,11 @@ Crea una aplicación de gestión tareas (un TODO list), en donde puedas agregar 
 
 * Base de datos
 
-|----------|
-| User     |
-|----------|
-| Id       |
-| Nick     |
-| Token    |
-| Password |
-| Admin    |
-| Avatar   |
-|----------|
-
 |---------|
 | Task    |
 |---------|
 | Id      |
 | Content |
-| UserId  |
 |         |
 |---------|
 
@@ -32,6 +20,9 @@ Crea una aplicación de gestión tareas (un TODO list), en donde puedas agregar 
 
 - [X] Crear la bd en phpmysql
 - [X] Añadir la BD en el archivo config.php
-- [ ] Crear el archivo users.php en la carpeta models.
-- [ ] Crear el archivo Tarea.php en la carpeta models.
-- [ ] Crear la clase Tarea.
+- [X] Crear una tarea
+- [X] Guardar una tarea
+- [X] Mostrar tarea
+- [X] Eliminar una tarea
+- [ ] Poner en espera o cancelada una tarea
+- [ ] Marcar tarea como finalizada o echa

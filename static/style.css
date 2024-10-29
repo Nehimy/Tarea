@@ -8,3 +8,44 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+header {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  background: #4bddff;
+  color: #ffff;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  /* grid-template-columns: repeat(2,auto); */
+  grid-template-rows: repeat(2,auto);
+}
+
+.container {
+  display: grid;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 10px;
+}
+
+#new-task-form {
+  display: grid;
+  place-content: center;
+  gap: 5px;
+}
+
+#text-box {
+  width: 80vw;
+}
+
+#new-task-form button {
+  width: 100px;
+  justify-self: center;
+}
