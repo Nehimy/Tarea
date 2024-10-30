@@ -40,10 +40,16 @@ class TaskController {
 
   public static function finishTask (Request $request): void
   {
-    // $task = new Task;
+    $task = new Task;
 
-    /* $task->$status = 0; */
+    $task->id = $request->params->id;
+    if (isset($task->id)) {
+        $task->active = false;
+    }
 
+    $task->save();
+
+    Router::redirect("/");
   }
 
 }
