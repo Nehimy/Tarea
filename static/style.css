@@ -59,12 +59,13 @@ main {
 .task {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  row-gap: 4px;
   background: var(--secundary-color);
   padding: 10px;
   border-radius: 5px;
   width: 50vw;
   box-shadow: 1px 1px 5px -3px var(--box-shadow-color);
+  min-width: fit-content;
+  gap: 5px;
 }
 
 .active {
