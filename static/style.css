@@ -1,7 +1,14 @@
-/*
-   El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte
-   del cálculo del ancho de la caja.
- */
+:root {
+  --primary-color: #4bddff;
+  --secundary-color: #ffff;
+  --background-Eggshell: #f4f4f4;
+  --box-shadow-color: gray;
+  --strikethrough-text-color: #b0b0b0;
+  --pink-red-color: #ee5252;
+  --apple-green-color: #48c45b;
+  --secondary-button-color: #7b827c;
+  --text-color: #eee;
+}
 
 *{
   margin: 0px;
@@ -11,6 +18,7 @@
 
 body {
   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  background: var(--background-Eggshell);
 }
 
 header {
@@ -18,16 +26,22 @@ header {
   place-content: center;
   justify-items: center;
   width: 100vw;
-  background: #4bddff;
-  color: #ffff;
+  background: var(--primary-color);
+  color: var(--secundary-color);
 }
 
-h1{
+h1 {
   text-decoration: underline overline;
+  padding: 15px;
+}
+
+strike {
+  display: none;
 }
 
 h4 {
   text-decoration: overline;
+  display: none;
 }
 
 main {
@@ -35,6 +49,7 @@ main {
   place-content: center;
   justify-items: center;
   grid-template-rows: repeat(2,auto);
+  padding: 10px;
 }
 
 .container {
@@ -44,35 +59,67 @@ main {
 .task {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 10px;
   row-gap: 4px;
+  background: var(--secundary-color);
+  padding: 10px;
+  border-radius: 5px;
+  width: 50vw;
+  box-shadow: 1px 1px 5px -3px var(--box-shadow-color);
 }
 
 .active {
-
-  color: #b0b0b0;
+  color: var(--strikethrough-text-color);
   text-decoration: line-through;
 }
 
-.button-delete {
-  background: #ee5252;
-  color: #fff;
+.button-delete, .button-finish {
+  background: var(--pink-red-color);
+  color: var(--secundary-color);
   padding: 5px 15px;
   border-radius: 5px;
   font-weight: 600;
+  text-decoration: none;
+  width: 100px;
+  transition: all 0.5s ease;
+}
+
+.button-finish {
+    background: var(--apple-green-color);
+}
+
+.button-save {
+  transition: all 0.5s ease;
+}
+
+#button:hover {
+  background: var(--secondary-button-color);
+  letter-spacing: 1px;
 }
 
 #new-task-form {
   display: grid;
   place-content: center;
   gap: 5px;
+  padding: 10px;
 }
 
 #text-box {
   width: 80vw;
+  height: 26px;
+  padding-left: 5px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px -3px var(--box-shadow-color);
 }
 
 #new-task-form button {
-  width: 100px;
   justify-self: center;
+  background: var(--pink-red-color);
+  color: var(--secundary-color);
+  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  width: 100px;
 }

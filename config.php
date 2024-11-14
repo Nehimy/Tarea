@@ -7,7 +7,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // Configuración del sitio
-define('SITE_URL', '');
+define('SITE_URL', 'https://project.kj5.top/');
 
 // Configuración avanzada
 define('ROOT_DIR', __DIR__);
