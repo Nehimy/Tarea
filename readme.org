@@ -25,4 +25,4 @@ Crea una aplicación de gestión tareas (un TODO list), en donde puedas agregar 
 - [X] Mostrar tarea
 - [X] Eliminar una tarea
 - [ ] Poner en espera o cancelada una tarea
-- [ ] Marcar tarea como finalizada o echa
+- [X] Marcar tarea como finalizada o echa

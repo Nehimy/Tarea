@@ -8,6 +8,15 @@
   --apple-green-color: #48c45b;
   --secondary-button-color: #7b827c;
   --text-color: #eee;
+  --primary-background-color: #e8e8e8;
+
+}
+
+@font-face {
+  font-family: FlindersTrial-Black;
+  src:
+    local(FlindersTrial-Black),
+    url(fonts/FlindersTrial-Black.ttf);
 }
 
 *{
@@ -18,7 +27,7 @@
 
 body {
   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-  background: var(--background-Eggshell);
+  background: var(--primary-background-color);
 }
 
 header {
@@ -31,6 +40,7 @@ header {
 }
 
 h1 {
+  font-family: FlindersTrial-Black;
   text-decoration: underline overline;
   padding: 15px;
 }
@@ -50,6 +60,17 @@ main {
   justify-items: center;
   grid-template-rows: repeat(2,auto);
   padding: 10px;
+  height: 80vw;
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  height: 70vw;
+  background: var(--background-Eggshell);
+  box-shadow: 1px 1px 5px -3px var(--box-shadow-color);
+  align-items: center;
+  border-radius: 10px;
 }
 
 .container {

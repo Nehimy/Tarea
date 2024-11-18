@@ -14,45 +14,47 @@
         <h4>This is heading 4</h4>
       </header>
       <main>
-        <div class="task">
-          <?php
-          foreach($view->tasks as $task){
-          ?>
-            <div class="active<?=$task->active?>">
-              <?php
-              echo "$task->id . $task->content<br>";
-              ?>
-            </div>
-            <a
-              class="button-delete"
+        <div class="card">
+          <div class="task">
+            <?php
+            foreach($view->tasks as $task){
+            ?>
+              <div class="active<?=$task->active?>">
+                <?php
+                echo "$task->id . $task->content<br>";
+                ?>
+              </div>
+              <a
+                class="button-delete"
+                id="button"
+                href="<?=SITE_URL?>task/<?=$task->id?>/delete"
+                hx-boost="true"
+              >
+                Eliminar</a>
+              <a
+                class="button-finish"
+                id="button"
+                href="<?=SITE_URL?>task/<?=$task->id?>/finish"
+                hx-boost="true"
+              >
+                Finalizar</a>
+            <?php
+            }
+            ?>
+          </div>
+          <form id="new-task-form"  method="POST" action="<?=SITE_URL?>" hx-boost="true">
+            <input id="text-box" type="text" name="content"
+                   value="" placeholder=" Nueva tarea">
+            <button
+              class="button-save"
               id="button"
-              href="<?=SITE_URL?>task/<?=$task->id?>/delete"
+              type="submit"
               hx-boost="true"
             >
-              Eliminar</a>
-            <a
-              class="button-finish"
-              id="button"
-              href="<?=SITE_URL?>task/<?=$task->id?>/finish"
-              hx-boost="true"
-            >
-              Finalizar</a>
-          <?php
-          }
-          ?>
+              Save
+            </button>
+          </form>
         </div>
-        <form id="new-task-form"  method="POST" action="<?=SITE_URL?>" hx-boost="true">
-          <input id="text-box" type="text" name="content"
-                 value="" placeholder=" Nueva tarea">
-          <button
-            class="button-save"
-            id="button"
-            type="submit"
-            hx-boost="true"
-          >
-            Save
-          </button>
-        </form>
       </main>
     </div>
       <script src="https://unpkg.com/htmx.org@2.0.3"
