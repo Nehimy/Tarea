@@ -32,17 +32,26 @@ body {
 
 header {
   display: grid;
-  place-content: center;
+  justify-content: center;
+  align-content: start;
   justify-items: center;
   width: 100vw;
+  height: fit-content;
   background: var(--primary-color);
   color: var(--secundary-color);
+  grid-template-rows: repeat(2,auto);
+  padding-top: 10px;
+  box-shadow: 1px 1px 5px -3px var(--box-shadow-color);
+}
+
+.logo {
+  width: 130px;
 }
 
 h1 {
   font-family: FlindersTrial-Black;
   text-decoration: underline overline;
-  padding: 15px;
+  padding-top: 5px;
 }
 
 strike {
@@ -75,6 +84,7 @@ main {
 
 .container {
   display: grid;
+  height: 100vh;
 }
 
 .task {
@@ -144,4 +154,5 @@ main {
   font-weight: 600;
   border: none;
   width: 100px;
+  box-shadow: 1px 1px 5px -3px var(--box-shadow-color);
 }

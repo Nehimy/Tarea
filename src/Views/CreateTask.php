@@ -3,12 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
-    <!-- <link rel="icon" type="image/svg" href="http://ney.lh/css/Notitas_icono.svg"> -->
+    <link rel="icon" type="image/svg" href="https://project.kj5.top/static/img/Kingo.svg">
     <title>To do list</title>
   </head>
   <body id="body">
     <div class="container">
       <header>
+        <img class="logo" src="static/img/Kingo.svg" alt="Logo Kingo" />
         <h1>To do list</h1>
         <strike>Texto tachado</strike>
         <h4>This is heading 4</h4>
